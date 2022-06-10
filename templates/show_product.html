@@ -1,0 +1,9 @@
+<h1>Category</h1>
+{% for category in categories %}
+<a href="{% url 'products:show_product' category.id %}">{{ category.name }}</a>
+{% endfor%}
+<hr>
+{% for product in products %}
+{{ product.name }}
+<a href="{% url 'products:order' product.id %}">주문하기</a>
+{% endfor%}
